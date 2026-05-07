@@ -32,7 +32,7 @@ function Admin() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/api/products"
+        "http:///khushboo-enterprises-production.up.railway.app/api/products"
       );
 
       setProducts(response.data.products);
@@ -54,7 +54,7 @@ function Admin() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/products/add",
+        "http:///khushboo-enterprises-production.up.railway.app/api/products/add",
         {
           name,
           price,
@@ -89,7 +89,7 @@ const deleteProduct = async (id) => {
   try {
 
     await axios.delete(
-      `http://localhost:5000/api/products/${id}`
+      `http:///khushboo-enterprises-production.up.railway.app/api/products/${id}`
     );
 
     alert("Product Deleted");

@@ -150,7 +150,7 @@ function App() {
   try {
 
     const { data } = await axios.post(
-      "http://localhost:5000/api/payment/create-order",
+      "http:///khushboo-enterprises-production.up.railway.app/api/payment/create-order",
       {
         amount: totalPrice
       }

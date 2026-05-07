@@ -22,7 +22,7 @@ function Signup() {
 
       await axios.post(
 
-        "http://localhost:5000/api/auth/signup",
+        "http:///khushboo-enterprises-production.up.railway.app/api/auth/signup",
 
         {
           name,
