@@ -29,8 +29,8 @@ function App() {
     try {
 
       const response = await axios.get(
-        "https://khushboo-enterprises-production.up.railway.app"
-      );
+  "https://khushboo-enterprises-production.up.railway.app/api/products"
+);
 
       setProducts(response.data.products);
 
@@ -150,7 +150,7 @@ function App() {
   try {
 
     const { data } = await axios.post(
-      "http:///khushboo-enterprises-production.up.railway.app/api/payment/create-order",
+      "http://khushboo-enterprises-production.up.railway.app/api/payment/create-order",
       {
         amount: totalPrice
       }
