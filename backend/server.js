@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const productRoutes = require("./routes/productRoutes");
 const authRoutes = require("./routes/authRoutes");
-const paymentRoutes = require("./routes/paymentRoutes");
+// const paymentRoutes = require("./routes/paymentRoutes");
 
 const app = express();
 
@@ -26,7 +26,7 @@ app.get("/test", (req, res) => {
 
 app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes);
-app.use("/api/payment", paymentRoutes);
+// app.use("/api/payment", paymentRoutes);
 
 const PORT = process.env.PORT || 5000;
 
