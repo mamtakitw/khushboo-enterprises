@@ -23,9 +23,12 @@ mongoose.connect(process.env.MONGO_URI)
 app.get("/test", (req, res) => {
     res.send("Test Route Working");
 });
+app.get("/", (req, res) => {
+  res.send("Backend Working");
+});
 
-app.use("/api/products", productRoutes);
-app.use("/api/auth", authRoutes);
+// app.use("/api/products", productRoutes);
+// app.use("/api/auth", authRoutes);
 // app.use("/api/payment", paymentRoutes);
 
 const PORT = process.env.PORT || 5000;
