@@ -127,11 +127,11 @@ function App() {
           <p className="tagline">Fashion • Footwear • Cosmetics</p>
         </div>
         <div className="nav-links">
-          <p>Home</p>
-          <p>Shop</p>
-          <p>Categories</p>
-          <p>Offers</p>
-          <p>Contact</p>
+          <p onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</p>
+          <p onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>Shop</p>
+          <p onClick={() => document.getElementById('categories').scrollIntoView({ behavior: 'smooth' })}>Categories</p>
+          <p onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>Offers</p>
+          <p onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Contact</p>
 
           <div
             className="cart-badge"
@@ -216,8 +216,7 @@ function App() {
       </section>
 
       {/* PRODUCTS */}
-      <section className="products-section">
-        <div className="section-header">
+               <div className="section-header" id="products">
           <h2>Trending Products</h2>
           <input
             type="text"
@@ -228,7 +227,7 @@ function App() {
           />
         </div>
 
-        <div className="filter-buttons">
+        <div className="filter-buttons" id="categories">
           <button onClick={() => setSelectedCategory("All")}>All</button>
           <button onClick={() => setSelectedCategory("Clothing")}>Clothing</button>
           <button onClick={() => setSelectedCategory("Footwear")}>Footwear</button>
@@ -310,7 +309,7 @@ function App() {
       </section>
 
       {/* FOOTER */}
-      <footer className="footer">
+      <footer className="footer" id="contact">
         <h2>Khushboo Enterprises</h2>
         <p>Premium Shopping Experience For Everyone</p>
         <p>© 2026 All Rights Reserved</p>
