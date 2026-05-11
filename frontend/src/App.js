@@ -84,7 +84,8 @@ function App() {
     try {
       const { data } = await axios.post(
         "http://khushboo-backend.onrender.com/api/payment/order",
-        { amount: totalPrice }
+        { amount: totalPrice },
+        { timeout: 60000 }
       );
       const options = {
         key: "rzp_test_SmSCzjljWGjp6e",
