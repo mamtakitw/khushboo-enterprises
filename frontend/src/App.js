@@ -83,7 +83,7 @@ function App() {
     }
     try {
       const { data } = await axios.post(
-        "http://khushboo-enterprises-production.up.railway.app/api/payment/create-order",
+        "http://khushboo-backend.onrender.com/api/payment/order",
         { amount: totalPrice }
       );
       const options = {
