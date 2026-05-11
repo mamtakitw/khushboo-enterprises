@@ -205,7 +205,6 @@ function App() {
           )}
         </div>
       )}
-
       {/* HERO SECTION */}
       <section className="hero-section">
         <div className="hero-overlay">
@@ -216,7 +215,9 @@ function App() {
       </section>
 
       {/* PRODUCTS */}
-               <div className="section-header" id="products">
+               {/* PRODUCTS */}
+      <section className="products-section" id="products">
+        <div className="section-header">
           <h2>Trending Products</h2>
           <input
             type="text"
