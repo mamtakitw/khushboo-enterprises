@@ -23,7 +23,7 @@ function App() {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/products");
+      const response = await axios.get("https://khushboo-backend.onrender.com/api/products");
       setProducts(response.data.products);
     } catch (error) {
       console.log(error);
