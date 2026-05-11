@@ -103,8 +103,9 @@ function App() {
       const razor = new window.Razorpay(options);
       razor.open();
     } catch (error) {
-      console.log(error);
-    }
+    console.log(error);
+    alert("Error: " + error.message);
+  }
   };
 
   const logoutUser = () => {
