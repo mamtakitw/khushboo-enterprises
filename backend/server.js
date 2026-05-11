@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const chatRoutes = require("./routes/chatRoutes");
 const productRoutes = require("./routes/productRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes);
 app.use("/api/chat", chatRoutes);
+app.use("/api/payment", paymentRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
