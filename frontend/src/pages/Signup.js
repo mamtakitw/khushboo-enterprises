@@ -2,16 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-
-
 function Signup() {
 
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
-  
   const [email, setEmail] = useState("");
-  
   const [password, setPassword] = useState("");
 
   const handleSignup = async (e) => {
@@ -21,52 +17,36 @@ function Signup() {
     try {
 
       const response = await axios.post(
-        "https://khushboo-backend.onrender.com",
+        "https://khushboo-backend.onrender.com/api/auth/signup",
         {
           name,
           email,
           password
         }
-        
       );
+
       localStorage.setItem(
         "token",
-       response.data.token
+        response.data.token
       );
-      
+
       alert("Signup Successful");
-      
+
       navigate("/");
 
     } catch (error) {
 
-      if (
-        error.response &&
-        error.response.data &&
-        error.response.data.message
-      ) {
+      console.log("FULL ERROR:", error);
 
-        if (
-          error.response.data.message.includes("already")
-        ) {
+      console.log(
+        "BACKEND RESPONSE:",
+        error?.response?.data
+      );
 
-          alert(
-            "User already exists. Please Login."
-          );
-
-          navigate("/login");
-
-        } else {
-
-          alert(error.response.data.message);
-
-        }
-
-      } else {
-
-        alert("Signup Failed");
-
-      }
+      alert(
+        error?.response?.data?.message ||
+        error.message
+      );
 
     }
 
