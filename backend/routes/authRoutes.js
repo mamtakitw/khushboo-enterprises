@@ -51,12 +51,29 @@ router.post("/signup", async (req, res) => {
 
     await newUser.save();
 
-    res.status(201).json({
+// CREATE TOKEN
 
-      success: true,
-      message: "Signup Successful"
+const token = jwt.sign(
 
-    });
+  {
+    id: newUser._id
+  },
+
+  "SECRETKEY",
+
+  {
+    expiresIn: "7d"
+  }
+
+);
+
+res.status(201).json({
+
+  success: true,
+  message: "Signup Successful",
+  token
+
+});
 
   } catch (error) {
 
