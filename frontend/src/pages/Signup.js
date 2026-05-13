@@ -20,7 +20,7 @@ function Signup() {
 
     try {
 
-      await axios.post(
+      const response = await axios.post(
         "https://khushboo-backend.onrender.com",
         {
           name,
@@ -29,9 +29,13 @@ function Signup() {
         }
         
       );
-
+      localStorage.setItem(
+        "token",
+       response.data.token
+      );
+      
       alert("Signup Successful");
-
+      
       navigate("/");
 
     } catch (error) {
