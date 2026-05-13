@@ -40,7 +40,8 @@ function Login() {
 
     } catch (error) {
 
-      alert(error.response.data.message);
+      alert("User not found. Please Signup First");
+      navigate("/signup");
 
     }
 
