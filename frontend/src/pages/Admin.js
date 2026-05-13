@@ -89,7 +89,7 @@ const deleteProduct = async (id) => {
   try {
 
     await axios.delete(
-      `http:///khushboo-enterprises-production.up.railway.app/api/products/${id}`
+      `http://khushboo-enterprises-production.up.railway.app/api/products/${id}`
     );
 
     alert("Product Deleted");

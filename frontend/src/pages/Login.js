@@ -20,7 +20,7 @@ function Login() {
 
       const response = await axios.post(
 
-        "http:///khushboo-enterprises-production.up.railway.app/api/auth/login",
+        "http://khushboo-enterprises-production.up.railway.app/api/auth/login",
 
         {
           email,

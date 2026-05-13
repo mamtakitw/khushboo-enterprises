@@ -155,8 +155,8 @@ function App() {
             <button className="logout-btn" onClick={logoutUser}>Logout</button>
           ) : (
             <>
-              <a href="/login">Login</a>
-              <a href="/signup">Signup</a>
+              <Link to="/login">Login</Link>
+              <Link to="/signup">Signup</Link>
             </>
           )}
         </div>

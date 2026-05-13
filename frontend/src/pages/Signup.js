@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
@@ -22,7 +22,7 @@ function Signup() {
 
       await axios.post(
 
-        "http:///khushboo-enterprises-production.up.railway.app/api/auth/signup",
+        "http://khushboo-enterprises-production.up.railway.app/api/auth/signup",
 
         {
           name,
